@@ -13,8 +13,8 @@
 
 DUALSHOCK4をOSに認識させておく
 
-以下のコマンドを入力する
- 'roslaunch robosys_gazebo robosys.launch'
+以下のコマンドを入力する  
+ `roslaunch robosys_gazebo robosys.launch`
 
  gazeboが起動し操作できるようになる 
 
