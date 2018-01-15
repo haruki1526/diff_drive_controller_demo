@@ -1,15 +1,15 @@
 # ros_demo
 ロボットシステム学課題2
 
-#実演
+# 実演
 
 
-#使用するもの
+# 使用するもの
 * DUALSHOCK4
 * PC(Ubuntu 16.04 LTS)
 * ROS kinetic
 
-#使用方法
+# 使用方法
 
 DUALSHOCK4をOSに認識させておく
 
