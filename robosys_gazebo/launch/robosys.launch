@@ -1,0 +1,24 @@
+<launch>
+
+	
+
+	<!-- urdf download -->
+	<param name="robot_description" textfile="$(find robosys_description)/urdf/robosys.urdf" />
+
+	<!-- start gazebo world -->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+	<!-- configuration -->
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model robosys" />
+	
+	<include file="$(find robosys_controller)/launch/control.launch"/>
+
+	<node pkg="joy" name="joy_node" type="joy_node"/>
+	
+	<node pkg="teleop_twist_joy" name="teleop_node" type="teleop_node"/>
+
+	<node pkg="robosys_controller" name="joy_control" type="joy_control.py"/>
+			
+</launch>
+
+

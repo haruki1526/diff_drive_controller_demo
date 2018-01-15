@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+
+<robot name="robosys">
+
+
+
+	<link name="base_link">
+		<visual>
+			<geometry>
+				<box size="0.2 0.1 0.1"/>
+			</geometry>
+		</visual>
+		<collision>
+			<geometry>
+				<box size="0.2 0.1 0.1"/>
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="1.0"/>
+			<inertia ixx="0.001666" iyy="0.004166666" izz="0.004166666" ixy="0" ixz="0" iyz="0"/>
+		</inertial>
+
+
+	</link>
+
+	<link name="right_wheel">
+		<visual>
+			<geometry>
+				<cylinder length="0.04" radius="0.08"/>
+			</geometry>
+			<origin rpy="-1.5708 0 0" xyz="0 0.02 0"/>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder length="0.04" radius="0.08"/>
+			</geometry>
+			<origin rpy="-1.5708 0 0" xyz="0 0.02 0"/>
+
+		</collision>
+		<inertial>
+			<mass value="0.5"/>
+			<inertia ixx="0.02066666" iyy="0.02066666" izz="0.04" ixy="0" ixz="0" iyz="0"/>
+		</inertial>
+
+	</link>
+	
+	<joint name="right_j" type="continuous">
+		<axis xyz="0 1 0"/>
+		<parent link="base_link"/>
+		<child link="right_wheel"/>
+		<origin rpy="0 0 0" xyz="-0.05 0.06 0"/>
+	</joint>
+
+	<link name="left_wheel">
+		<visual>
+			<geometry>
+				<cylinder length="0.04" radius="0.08"/>
+			</geometry>
+			<origin rpy="1.5708 0 0" xyz="0 -0.02 0"/>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder length="0.04" radius="0.08"/>
+			</geometry>
+			<origin rpy="1.5708 0 0" xyz="0 -0.02 0"/>
+		</collision>
+		<inertial>
+			<mass value="0.5"/>
+			<inertia ixx="0.02066666" iyy="0.02066666" izz="0.04" ixy="0" ixz="0" iyz="0"/>
+		</inertial>
+
+
+
+	</link>
+
+	<joint name="left_j" type="continuous">
+		<axis xyz="0 1 0"/>
+		<parent link="base_link"/>
+		<child link="left_wheel"/>
+		<origin rpy="0 0 0" xyz="-0.05 -0.06 0"/>
+	</joint>
+
+
+	<transmission name="t_right">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="right_j">
+			<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="m_right">
+			<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+	
+	<transmission name="t_left">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="left_j">
+			<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="m_left">
+			<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
+
+	<gazebo reference="base_link">
+		<mu1 value="0.3"/>
+		<mu2 value="0.3"/>
+	</gazebo>
+
+	<gazebo reference="right_wheel">
+		<mu1 value="0.3"/>
+		<mu2 value="0.3"/>
+	</gazebo>
+
+	<gazebo reference="left_wheel">
+		<mu1 value="0.3"/>
+		<mu2 value="0.3"/>
+	</gazebo>
+
+
+	<gazebo>
+
+		<plugin name="ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>robosys</robotNamespace>
+		
+		</plugin>
+	</gazebo>
+
+
+
+	
+		
+
+</robot>
+
+
