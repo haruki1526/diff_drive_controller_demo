@@ -1,6 +1,9 @@
 # ros_demo
 ロボットシステム学課題2
 
+# 概要
+シミュレータ上の2輪の台車をDUALSHOCK4の左のジョイスティックで操作できます。
+
 # 実演
 https://www.youtube.com/watch?v=51kOU_XzJ6A
 
