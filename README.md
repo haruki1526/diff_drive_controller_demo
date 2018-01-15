@@ -2,7 +2,7 @@
 ロボットシステム学課題2
 
 # 実演
-
+https://www.youtube.com/watch?v=51kOU_XzJ6A
 
 # 使用するもの
 * DUALSHOCK4
