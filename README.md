@@ -7,7 +7,7 @@
 # 実演
 https://www.youtube.com/watch?v=51kOU_XzJ6A
 
-# 使用するもの
+# 必要なもの
 * DUALSHOCK4
 * PC(Ubuntu 16.04 LTS)
 * ROS kinetic
