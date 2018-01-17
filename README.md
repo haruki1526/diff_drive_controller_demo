@@ -13,9 +13,9 @@ https://www.youtube.com/watch?v=51kOU_XzJ6A
 * ROS kinetic
 * GAZEBO 7.0
 
-# 使用方法#
+# 使用方法
 
-joyパッケージがインストールされていなければ以下のコマンドでインストールします
+joyパッケージがインストールされていなければ以下のコマンドでインストールします  
 `sudo apt-get install ros-kinetic-joy`
 
 DUALSHOCK4をOSに認識させておきます
