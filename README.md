@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=51kOU_XzJ6A
 
 # 必要なもの
 * DUALSHOCK4
-* pc
+* PC
 
 # 動作環境
 * Ubuntu 16.04 LTS
