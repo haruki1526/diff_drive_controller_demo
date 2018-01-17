@@ -11,8 +11,9 @@ https://www.youtube.com/watch?v=51kOU_XzJ6A
 * DUALSHOCK4
 * PC(Ubuntu 16.04 LTS)
 * ROS kinetic
+* GAZEBO 7.0
 
-# 使用方法
+## 使用方法
 
 DUALSHOCK4をOSに認識させておきます
 
@@ -21,5 +22,5 @@ DUALSHOCK4をOSに認識させておきます
 
  gazeboが起動し操作できるようになります 
 
-
+ 左スティックを倒した方向に走ります
 
