@@ -13,14 +13,14 @@ https://www.youtube.com/watch?v=51kOU_XzJ6A
 * ROS kinetic
 * GAZEBO 7.0
 
-## 使用方法
+# 使用方法 #
 
 DUALSHOCK4をOSに認識させておきます
 
 以下のコマンドを入力します  
 `roslaunch robosys_gazebo robosys.launch`
 
- gazeboが起動し操作できるようになります 
+gazeboが起動し操作できるようになります 
 
- 左スティックを倒した方向に走ります
+左スティックを倒した方向に走ります
 
