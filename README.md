@@ -1,5 +1,5 @@
 # ros_demo
-ロボットシステム学課題2
+diff_drive_controllerの使用例です。
 
 # Description
 シミュレータ上の2輪の台車をDUALSHOCK4の左のジョイスティックで操作できます。
