@@ -1,4 +1,4 @@
-# ros_demo
+# diff_drive_conntroller
 diff_drive_controllerの使用例です。
 
 # Description
