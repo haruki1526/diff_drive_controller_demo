@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 
+
 <robot name="robosys">
 
 
@@ -73,12 +74,54 @@
 
 	</link>
 
+	
+
 	<joint name="left_j" type="continuous">
 		<axis xyz="0 1 0"/>
 		<parent link="base_link"/>
 		<child link="left_wheel"/>
 		<origin rpy="0 0 0" xyz="-0.05 -0.06 0"/>
 	</joint>
+
+	<!-- Setting of Depth Sensor Link and Joint -->
+	<link name="depth_base_link"/>
+	<link name="depth_link">
+		<visual>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>	
+			</geometry>
+		</visual>
+		<collision>
+			<geometry>
+				<box size="0.01 0.01 0.01"/>	
+			</geometry>
+		</collision>
+		<inertial>
+			<mass value="0.1"/>
+			<inertia ixx="0.005208" ixy="0.0" ixz="0.0" iyy="0.005208" iyz="0.0" izz="0.005208"/>
+		</inertial>
+	</link>
+
+
+
+
+	<joint name="depth_base_joint" type="fixed">
+		<origin rpy="0 0 0" xyz="0.095 0 0.05"/>
+		<parent link="base_link"/>
+		<child link="depth_base_link"/>
+	</joint>
+
+	<joint name="depth_joint" type="fixed">
+		<origin rpy="0 0 0" xyz="0 0 0.005"/>
+		<parent link="depth_base_link"/>
+		<child link="depth_link"/>
+	</joint>
+
+
+
+		
+
+
 
 
 	<transmission name="t_right">
