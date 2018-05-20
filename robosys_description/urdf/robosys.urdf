@@ -84,7 +84,6 @@
 	</joint>
 
 	<!-- Setting of Depth Sensor Link and Joint -->
-	<link name="depth_base_link"/>
 	<link name="depth_link">
 		<visual>
 			<geometry>
@@ -106,16 +105,11 @@
 
 
 	<joint name="depth_base_joint" type="fixed">
-		<origin rpy="0 0 0" xyz="0.095 0 0.05"/>
+		<origin rpy="0 0 0" xyz="0.1 0 0.055"/>
 		<parent link="base_link"/>
-		<child link="depth_base_link"/>
-	</joint>
-
-	<joint name="depth_joint" type="fixed">
-		<origin rpy="0 0 0" xyz="0 0 0.005"/>
-		<parent link="depth_base_link"/>
 		<child link="depth_link"/>
 	</joint>
+
 
 
 
@@ -170,6 +164,7 @@
 		
 		</plugin>
 	</gazebo>
+
 
 
 
