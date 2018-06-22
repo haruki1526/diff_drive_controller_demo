@@ -1,5 +1,5 @@
 # diff_drive_conntroller
-diff_drive_controllerの使用例です。
+diff_drive_controller
 
 # Description
 シミュレータ上の2輪の台車をDUALSHOCK4の左のジョイスティックで操作できます。
